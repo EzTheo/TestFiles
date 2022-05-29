@@ -1,7 +1,15 @@
 [
     {
+        "GridItemType": "Grid",
+        "MatrixValue": 0
+    },
+    {
         "GridItemType": "Ghost",
         "MatrixValue": 1,
-        "Src": "hallo"
+        "Src": "https://github.com/EzTheo/TestFiles/blob/19df40b1d2787b190828710f99a85754868d1fcd/ClassesPractice/Ghost.PNG"
+    },
+    {
+        "GridItemType": "Blob",
+        "MatrixValue": 3
     }
 ]
