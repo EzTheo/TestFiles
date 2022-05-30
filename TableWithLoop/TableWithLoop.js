@@ -27,7 +27,13 @@ for (let row = 1; row < 11; row++) {
         //Lager eventListener
         newTd.addEventListener("click", () => {
             console.log("CLICKED", event.target.id);
-            event.target.style.backgroundColor = "lightgray";
+            if (event.target.hasAttribute("selected")) {
+                event.target.removeAttribute("selected");
+                event.target.style.backgroundColor = "";
+            } else {
+                event.target.setAttribute("selected", true);
+                event.target.style.backgroundColor = "lightgray";
+            }
         });
     }
 }
