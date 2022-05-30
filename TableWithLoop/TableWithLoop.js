@@ -25,6 +25,9 @@ for (let row = 1; row < 11; row++) {
         //Legger til tallet
         newTd.innerHTML = row * column;
         //Lager eventListener
-        newTd.addEventListener("click", () => console.log("CLICKED", event.target.id));
+        newTd.addEventListener("click", () => {
+            console.log("CLICKED", event.target.id);
+            event.target.style.backgroundColor = "lightgray";
+        });
     }
 }
