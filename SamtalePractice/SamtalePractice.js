@@ -6,19 +6,19 @@ class Test {
         this.matrixRows = matrixRows;
         this.matrixColumns = matrixColumns;
         this.matrix = matrix
-            ? new Array(this.matrixRows).fill(0).map(() => new Array(this.matrixColumns).fill(0))
+            ? new Array(this.matrixRows)
+                  .fill(0)
+                  .map(() => new Array(this.matrixColumns).fill(0))
             : undefined; //Muligens bruke ?. på disse
     }
     createGrid() {
         stylesheet.addRule(
             "body",
             `grid-template-rows: repeat(auto-fill, ${100 / this.matrixRows}vh);
-            grid-template-columns: repeat(auto-fill, ${100 / this.matrixColumns}vw)`
+            grid-template-columns: repeat(auto-fill, ${
+                100 / this.matrixColumns
+            }vw)`
         );
-        /*         for (let y = 0; y < this.matrix.length; y++)
-            for (let x = 0; x < this.matrix[y].length; x++) {
-                console.log(this.matrix[y][x]);
-            } */ //Vet ikke hva jeg skulle med dette
         for (let x in this.items) {
             document.querySelector("body").append(this.items[x]);
         }

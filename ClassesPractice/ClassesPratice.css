@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+}
+.blob {
+    background-color: white;
+    border-radius: 50%;
+    width: 50%;
+    aspect-ratio: 1/1;
+}
+.ghost {
+    width: 100%;
+}
