@@ -1,0 +1,28 @@
+body {
+    background-color: #2e2e3a;
+    display: flex;
+    flex-flow: column;
+    font-family: "Roboto Mono", monospace;
+}
+#title {
+    color: white;
+    font-size: 300%;
+    place-self: center;
+}
+table {
+    height: 600px;
+    width: 600px;
+    border: white solid 2px;
+    border-radius: 5px;
+    align-self: center;
+}
+tr {
+    width: 100%;
+    height: calc(100% / 10);
+    background-color: white;
+}
+td {
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    text-align: center;
+}
