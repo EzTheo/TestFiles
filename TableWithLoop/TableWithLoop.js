@@ -1,4 +1,3 @@
-//Her lages alle elementene på samme sted for å unngå ekstra linjer.
 function createHTMLElement({ type, className, id, parent }) {
     const newElement = document.createElement(type);
     newElement.className = className;
@@ -6,33 +5,24 @@ function createHTMLElement({ type, className, id, parent }) {
     document.querySelector(parent).appendChild(newElement);
     return newElement;
 }
-//Lager Table
-createHTMLElement({ type: "table", parent: "body" });
 
-//Looper over rader 10 ganger
-for (let row = 1; row < 11; row++) {
-    //Lager en tr
+for (let row = 1; row <= 10; row++) {
     createHTMLElement({ type: "tr", className: "tr", id: `row${row}`, parent: "table" });
-    //Looper over columns 10 ganger
-    for (let column = 1; column < 11; column++) {
-        //Lager en td satt til "const newTd". Dette fordi den brukes under.
+    for (let column = 1; column <= 10; column++) {
         const newTd = createHTMLElement({
             type: "td",
             className: "td",
             id: `[${row}-${column}]`,
             parent: `#row${row}`,
         });
-        //Legger til tallet
         newTd.innerHTML = row * column;
-        //Lager eventListener
         newTd.addEventListener("click", () => {
-            console.log("CLICKED", event.target.id);
             if (event.target.hasAttribute("selected")) {
                 event.target.removeAttribute("selected");
-                event.target.style.backgroundColor = "";
+                event.target.style.filter = "brightness(100%)";
             } else {
                 event.target.setAttribute("selected", true);
-                event.target.style.backgroundColor = "lightgray";
+                event.target.style.filter = "brightness(125%)";
             }
         });
     }
