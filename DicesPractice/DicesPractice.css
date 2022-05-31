@@ -1,0 +1,23 @@
+body {
+    background-color: #3f4b3b;
+    display: flex;
+    flex-flow: column;
+    font-family: "Roboto Mono", monospace;
+}
+p {
+    color: white;
+    font-size: 300%;
+    place-self: center;
+}
+#container {
+    width: 600px;
+    height: 600px;
+    border: white solid 2px;
+    border-radius: 5px;
+    place-self: center;
+    text-align: center;
+}
+.dice {
+    width: 75px;
+    height: 75px;
+}
