@@ -1,5 +1,5 @@
 body {
-    background-color: #3f4b3b;
+    background-color: #832232;
     display: flex;
     flex-flow: column;
     font-family: "Roboto Mono", monospace;
@@ -16,6 +16,7 @@ p {
     border-radius: 5px;
     place-self: center;
     text-align: center;
+    background-color: #7a1e32;
 }
 .dice {
     width: 75px;
