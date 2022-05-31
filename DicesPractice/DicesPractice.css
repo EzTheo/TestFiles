@@ -12,7 +12,7 @@ p {
 #container {
     width: 600px;
     height: 600px;
-    border: white solid 2px;
+    border: white solid 4px;
     border-radius: 5px;
     place-self: center;
     text-align: center;
