@@ -13,8 +13,14 @@ const random = () => {
     monsterEL.setAttribute("max-x", monsterX + monsterWidth);
     monsterEL.setAttribute("min-y", monsterY);
     monsterEL.setAttribute("max-y", monsterY + monsterHeight);
-    console.log(monsterEL.getAttribute("min-x"), monsterEL.getAttribute("max-x"));
-    console.log(monsterEL.getAttribute("min-y"), monsterEL.getAttribute("max-y"));
+    console.log(
+        monsterEL.getAttribute("min-x"),
+        monsterEL.getAttribute("max-x")
+    );
+    console.log(
+        monsterEL.getAttribute("min-y"),
+        monsterEL.getAttribute("max-y")
+    );
     monsterEL.style.right = `${monsterX}px`;
     monsterEL.style.top = `${monsterY}px`;
 };
