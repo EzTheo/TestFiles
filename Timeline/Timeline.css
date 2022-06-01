@@ -1,0 +1,67 @@
+/*HTML*/
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 100px calc(100vh - 100px);
+    font-family: "Roboto Mono", monospace;
+}
+label {
+    margin-right: 10px;
+    writing-mode: vertical-rl;
+    color: black;
+    font-size: 150%;
+    text-align: center;
+    height: 50%;
+}
+
+/*Grid*/
+#header {
+    min-width: 100%;
+    height: 100px;
+    background-color: red;
+    place-self: center top;
+    display: flex;
+    justify-content: space-between;
+}
+#logo {
+    width: 20%;
+    height: 100%;
+    background: yellow;
+}
+#searchbar {
+    width: 50%;
+    height: 100%;
+    background: blue;
+}
+#view {
+    aspect-ratio: 1;
+    height: 100%;
+    background: pink;
+}
+
+#timeline {
+    min-width: 100%;
+    min-height: 100%;
+    background-color: green;
+    display: flex;
+    place-content: center;
+}
+#observations-container {
+    display: flex;
+    justify-content: space-evenly;
+    place-content: bottom end;
+    width: 80vw;
+    height: 50%;
+    border: solid black 1px;
+}
+#events-container {
+}
+
+/*Classes*/
+.box {
+    width: 100px;
+    aspect-ratio: 1;
+    border: solid black 1px;
+    border-radius: 20%;
+    place-self: center;
+}
