@@ -7,11 +7,11 @@ body {
 }
 label {
     margin-right: 10px;
-    writing-mode: vertical-rl;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
     color: black;
     font-size: 150%;
     text-align: center;
-    height: 50%;
 }
 
 /*Grid*/
@@ -19,42 +19,89 @@ label {
     min-width: 100%;
     height: 100px;
     background-color: red;
-    place-self: center top;
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 }
 #logo {
-    width: 20%;
-    height: 100%;
+    width: 80%;
+    height: inherit;
     background: yellow;
+    place-self: left center;
 }
-#searchbar {
-    width: 50%;
+#search {
+    width: 70%;
+    height: 40%;
+    background: lightblue;
+    place-self: center;
+    border-radius: 10px;
+    display: flex;
+}
+#search-bar {
+    place-self: right;
     height: 100%;
-    background: blue;
+    width: 100%;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+#search-icon {
+    height: 100%;
+    aspect-ratio: 1;
+    border-right: 1px solid black;
+    place-self: left;
 }
 #view {
     aspect-ratio: 1;
-    height: 100%;
+    height: inherit;
     background: pink;
+    place-self: center;
 }
 
 #timeline {
     min-width: 100%;
     min-height: 100%;
     background-color: green;
-    display: flex;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
     place-content: center;
+}
+#timeline-container1 {
+    display: flex;
+    width: 80vw;
+}
+#timeline-container1 > label {
+    place-self: center;
+}
+#timeline-container2 {
+    display: flex;
+    width: 80vw;
+}
+#timeline-container2 > label {
+    place-self: center;
 }
 #observations-container {
     display: flex;
     justify-content: space-evenly;
-    place-content: bottom end;
-    width: 80vw;
-    height: 50%;
+    place-items: end;
+    width: 100%;
+    height: 90%;
     border: solid black 1px;
+    place-self: end;
+}
+#observations-container > * {
+    margin-bottom: 10px;
 }
 #events-container {
+    display: flex;
+    justify-content: space-evenly;
+    place-items: start;
+    width: 100%;
+    height: 90%;
+    border: solid black 1px;
+}
+#events-container > * {
+    margin-top: 10px;
 }
 
 /*Classes*/
@@ -63,5 +110,4 @@ label {
     aspect-ratio: 1;
     border: solid black 1px;
     border-radius: 20%;
-    place-self: center;
 }

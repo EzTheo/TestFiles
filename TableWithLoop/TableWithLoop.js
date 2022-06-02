@@ -7,7 +7,12 @@ function createHTMLElement({ type, className, id, parent }) {
 }
 
 for (let row = 1; row <= 10; row++) {
-    createHTMLElement({ type: "tr", className: "tr", id: `row${row}`, parent: "table" });
+    createHTMLElement({
+        type: "tr",
+        className: "tr",
+        id: `row${row}`,
+        parent: "table",
+    });
     for (let column = 1; column <= 10; column++) {
         const newTd = createHTMLElement({
             type: "td",

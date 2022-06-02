@@ -1,12 +1,11 @@
 class Box {
-    constructor() {}
-    create() {
+    constructor({ type, className, parent } = {}) {
         const newBox = createHTMLElement({
-            type: "div",
-            className: "box",
-            parent: "#observations-container",
+            type: type ?? "div",
+            className: className ?? "box",
+            parent: parent ?? undefined,
         });
-        newBox.addEventListener("click", this.clicked);
+        newBox.addEventListener("click", this.clicked.bind(this));
         return this;
     }
     clicked() {
@@ -16,12 +15,18 @@ class Box {
 }
 class Observasjon extends Box {
     constructor() {
-        super();
+        super({ parent: "#observations-container" });
+    }
+    clicked() {
+        console.log("Observasjon");
     }
 }
 class Hendelse extends Box {
     constructor() {
-        super();
+        super({ parent: "#events-container" });
+    }
+    clicked() {
+        console.log("hendelse");
     }
 }
 const createHTMLElement = ({ type, id, className, parent }) => {
@@ -32,13 +37,11 @@ const createHTMLElement = ({ type, id, className, parent }) => {
     return newElement;
 };
 
-const test = new Box().create();
-const test2 = new Box().create();
-const test3 = new Box().create();
-const test4 = new Box().create();
-const test5 = new Box().create();
-const test6 = new Box().create();
-const test7 = new Box().create();
-const test8 = new Box().create();
-const test9 = new Box().create();
-const test10 = new Box().create();
+const test1 = new Observasjon();
+const test2 = new Hendelse();
+const test4 = new Hendelse();
+const test5 = new Observasjon({});
+const test6 = new Hendelse();
+const test7 = new Hendelse();
+const test8 = new Hendelse();
+const test9 = new Hendelse();
