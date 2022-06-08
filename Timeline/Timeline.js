@@ -10,7 +10,11 @@ class Box {
         return this;
     }
     clicked() {
-        const popUp = createHTMLElement({ type: "div", id: "popup", parent: "#timeline" });
+        const popUp = createHTMLElement({
+            type: "div",
+            id: "popup",
+            parent: "#timeline",
+        });
         const newContainer = createHTMLElement({
             type: "div",
             id: "popup-container",
@@ -22,7 +26,12 @@ class Box {
             id: "popup-cross",
             parent: "#popup-container",
         });
-        popUpCross.addEventListener("click", () => document.querySelector("#popup").remove());
+        popUp.setAttribute("tabindex", 0);
+        popUp.addEventListener("focusout", () => popUp.remove());
+        popUpCross.addEventListener("click", () =>
+            document.querySelector("#popup").remove()
+        );
+        popUp.focus();
         return this;
     }
     addTitle(title) {
@@ -55,6 +64,7 @@ const test2 = new Hendelse().addTitle("Test 2");
 const test4 = new Hendelse().addTitle("Test");
 const test5 = new Observasjon().addTitle("Test");
 const test6 = new Hendelse().addTitle("Test");
+const test11 = new Hendelse().addTitle("Test");
 const test7 = new Hendelse().addTitle("Test");
 const test8 = new Hendelse().addTitle("Test");
 const test9 = new Hendelse().addTitle("Test");
