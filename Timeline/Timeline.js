@@ -28,9 +28,7 @@ class Box {
         });
         popUp.setAttribute("tabindex", 0);
         popUp.addEventListener("focusout", () => popUp.remove());
-        popUpCross.addEventListener("click", () =>
-            document.querySelector("#popup").remove()
-        );
+        popUpCross.addEventListener("click", () => document.querySelector("#popup").remove());
         popUp.focus();
         return this;
     }
@@ -47,27 +45,43 @@ class Box {
         return this;
     }
 }
-class Observasjon extends Box {
+class Observation extends Box {
     constructor() {
         super({ parent: "#observations-container" });
     }
 }
-class Hendelse extends Box {
+class Event extends Box {
     constructor() {
         super({ parent: "#events-container" });
     }
 }
 
 //Objects
-const test1 = new Observasjon().addTag("tag1", true).addTitle("Test");
-const test2 = new Hendelse().addTitle("Test 2");
-const test4 = new Hendelse().addTitle("Test");
-const test5 = new Observasjon().addTitle("Test");
-const test6 = new Hendelse().addTitle("Test");
-const test11 = new Hendelse().addTitle("Test");
-const test7 = new Hendelse().addTitle("Test");
-const test8 = new Hendelse().addTitle("Test");
-const test9 = new Hendelse().addTitle("Test");
+const Event1 = new Event().addTitle("Event 1");
+const Event2 = new Event().addTitle("Event 2");
+const Event4 = new Event().addTitle("Event 3");
+const Event3 = new Event().addTitle("Event 4");
+const Event5 = new Event().addTitle("Event 5");
+const Event6 = new Event().addTitle("Event 6");
+const Event7 = new Event().addTitle("Event 7");
+const Event8 = new Event().addTitle("Event 8");
+const Event9 = new Event().addTitle("Event 9");
+const Event10 = new Event().addTitle("Event 10");
+const Event11 = new Event().addTitle("Event 11");
+const Event12 = new Event().addTitle("Event 12");
+
+const Ob1 = new Observation().addTitle("Observasjon 1");
+const Ob2 = new Observation().addTitle("Observasjon 2");
+const Ob4 = new Observation().addTitle("Observasjon 3");
+const Ob3 = new Observation().addTitle("Observasjon 4");
+const Ob5 = new Observation().addTitle("Observasjon 5");
+const Ob6 = new Observation().addTitle("Observasjon 6");
+const Ob7 = new Observation().addTitle("Observasjon 7");
+const Ob8 = new Observation().addTitle("Observasjon 8");
+const Ob9 = new Observation().addTitle("Observasjon 9");
+const Ob10 = new Observation().addTitle("Observasjon 10");
+const Ob11 = new Observation().addTitle("Observasjon 11");
+const Ob12 = new Observation().addTitle("Observasjon 12");
 
 //Functions
 function createHTMLElement({ type, id, className, parent }) {
